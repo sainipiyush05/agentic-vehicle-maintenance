@@ -1,5 +1,18 @@
 ## Agentic-Vehicale-maintenance
 
+## 🧠 System Overview
+
+The platform consists of:
+- **Frontend**: React-based dashboards for owners, service centers, and manufacturers
+- **Backend**: FastAPI-powered agentic system for predictions, RCA, and scheduling
+- **Supabase**: Database, auth, edge functions, and triggers
+- **Voice Interface**: Speech-to-text driven agent interaction
+
+---
+
+## 📁 Project Structure
+
+```text
 agentic-vehicle-maintenance/
 │
 ├── frontend/
@@ -27,58 +40,19 @@ agentic-vehicle-maintenance/
 │
 ├── backend/
 │   ├── api/
-│   │   ├── main.py                  # FastAPI entry
+│   │   ├── main.py
 │   │   ├── config/
-│   │   │   ├── env.py
-│   │   │   └── settings.py
-│   │   │
 │   │   ├── db/
-│   │   │   ├── supabase.py           # Supabase client
-│   │   │   └── schemas.py            # Pydantic models
-│   │   │
 │   │   ├── routes/
-│   │   │   ├── vehicles.py
-│   │   │   ├── telematics.py
-│   │   │   ├── predictions.py
-│   │   │   ├── scheduling.py
-│   │   │   └── feedback.py
-│   │   │
 │   │   ├── agents/
-│   │   │   ├── master_agent.py       # Orchestrator
-│   │   │   ├── prediction_agent.py
-│   │   │   ├── scheduling_agent.py
-│   │   │   ├── rca_agent.py
-│   │   │   └── ueba_agent.py
-│   │   │
 │   │   ├── ml/
-│   │   │   ├── model.py
-│   │   │   ├── feature_engineering.py
-│   │   │   └── inference.py
-│   │   │
 │   │   ├── services/
-│   │   │   ├── notification_service.py
-│   │   │   └── logging_service.py
-│   │   │
 │   │   └── utils/
-│   │       ├── auth.py
-│   │       └── validators.py
-│   │
 │   └── requirements.txt
 │
 ├── supabase/
 │   ├── migrations/
-│   │   ├── 001_init_tables.sql
-│   │   ├── 002_rls_policies.sql
-│   │   └── 003_triggers.sql
-│   │
 │   ├── edge-functions/
-│   │   ├── auto_schedule/
-│   │   │   └── index.ts
-│   │   ├── send_alert/
-│   │   │   └── index.ts
-│   │   └── ueba_monitor/
-│   │       └── index.ts
-│   │
 │   └── seed.sql
 │
 ├── docs/
