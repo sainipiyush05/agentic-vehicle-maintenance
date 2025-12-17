@@ -1,4 +1,4 @@
-## Agentic-Vehicale-maintenance
+## Agentic-Vehicle-Maintenance
 
 ## 🧠 System Overview
 
